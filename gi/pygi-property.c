@@ -121,7 +121,7 @@ pygi_get_property_value_real (PyGObject *instance,
             arg.v_boolean = g_value_get_boolean (&value);
             break;
         case GI_TYPE_TAG_INT8:
-            arg.v_int8 = g_value_get_schar (&value);
+            arg.v_int8 = g_value_get_char (&value);
             break;
         case GI_TYPE_TAG_INT16:
         case GI_TYPE_TAG_INT32:
@@ -338,7 +338,7 @@ pygi_set_property_value_real (PyGObject *instance,
             g_value_set_boolean (&value, arg.v_boolean);
             break;
         case GI_TYPE_TAG_INT8:
-            g_value_set_schar (&value, arg.v_int8);
+            g_value_set_char (&value, arg.v_int8);
             break;
         case GI_TYPE_TAG_INT16:
         case GI_TYPE_TAG_INT32:
