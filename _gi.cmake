@@ -47,7 +47,7 @@ include_directories(${FFI_INCLUDE_DIRS} gi/_gobject gi/_glib gi/ ${PYTHON_INCLUD
 add_library(_gi SHARED ${_gi_sources})
 target_link_libraries(_gi pyglib_gi_2_0_${PYTHON_BASENAME} ${PYTHON_LIBRARIES} ${GLIB_LIBRARIES} ${GI_LIBRARIES})
 
-set_target_properties(_gi
+set_target_properties(_gi _gi pyglib_gi_2_0_${PYTHON_BASENAME}
  PROPERTIES
    PREFIX "" # There is no prefix even on UNIXes
    SUFFIX "${_modsuffix}" # The extension got from Python libraries
